@@ -55,104 +55,118 @@ public class MainActivity extends AppCompatActivity {
 
         mEditText = (EditText) findViewById(R.id.am_edittext_1);
 
-//        mButton[0].setOnClickListener( Log.d("BTNTAG_", mButton[0].getText()) );
+//        =
         mButton0.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d("BTNTAG_", mButton0.getText().toString());
+                previewAddInput(doMathOperation());
             }
         });
+//        AC
         mButton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d("BTNTAG_", mButton1.getText().toString());
+                resetInput();
             }
         });
+//        0
         mButton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 previewAddInput(mButton2.getText().toString());
             }
         });
+//        .
         mButton3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 previewAddInput(mButton3.getText().toString());
             }
         });
+//        +
         mButton4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 previewAddInput(mButton4.getText().toString());
             }
         });
+//        1
         mButton5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 previewAddInput(mButton5.getText().toString());
             }
         });
+//        2
         mButton6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 previewAddInput(mButton6.getText().toString());
             }
         });
+//        3
         mButton7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 previewAddInput(mButton7.getText().toString());
             }
         });
+//        -
         mButton8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 previewAddInput(mButton8.getText().toString());
             }
         });
+//        4
         mButton9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 previewAddInput(mButton9.getText().toString());
             }
         });
+//        5
         mButton10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 previewAddInput(mButton10.getText().toString());
             }
         });
+//        6
         mButton11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 previewAddInput(mButton11.getText().toString());
             }
         });
+//        /
         mButton12.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 previewAddInput(mButton12.getText().toString());
             }
         });
+//        7
         mButton13.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 previewAddInput(mButton13.getText().toString());
             }
         });
+//        8
         mButton14.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 previewAddInput(mButton14.getText().toString());
             }
         });
+//        9
         mButton15.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 previewAddInput(mButton15.getText().toString());
             }
         });
-
 
     }
 
@@ -162,7 +176,37 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void previewAddInput(String newChar){
-        previewText = newChar + previewText;
+        previewText += newChar;
         mEditText.setText(previewText);
+    }
+
+    public void resetInput(){
+        previewText = "";
+        mEditText.setText(previewText);
+    }
+
+    private String doMathOperation(){
+        String mathString = mEditText.getText().toString();
+        String returnString = "";
+
+        resetInput();
+
+        if(mathString.contains(" - ")){
+            String numbers[] = mathString.split(" - ");
+
+            int x;
+            int y;
+
+            x = Integer.parseInt(numbers[0]);
+            y = Integer.parseInt(numbers[1]);
+
+            int result = x - y;
+
+            returnString = String.valueOf(result);
+        }
+
+
+
+        return returnString;
     }
 }

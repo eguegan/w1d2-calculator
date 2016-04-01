@@ -48,7 +48,7 @@
             android:id="@+id/am_btn_13"
             android:layout_width="match_parent"
             android:layout_weight="1"
-            android:text="/"
+            android:text=" / "
             android:layout_height="wrap_content" />
 
     </LinearLayout>
@@ -79,7 +79,7 @@
             android:id="@+id/am_btn_9"
             android:layout_width="match_parent"
             android:layout_weight="1"
-            android:text="-"
+            android:text=" - "
             android:layout_height="wrap_content" />
 
     </LinearLayout>
@@ -110,7 +110,7 @@
             android:id="@+id/am_btn_5"
             android:layout_width="match_parent"
             android:layout_weight="1"
-            android:text="+"
+            android:text=" + "
             android:layout_height="wrap_content" />
 
     </LinearLayout>
