@@ -9,24 +9,27 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
+
 public class MainActivity extends AppCompatActivity {
 
-    private Button mButton0;
-    private Button mButton1;
-    private Button mButton2;
-    private Button mButton3;
-    private Button mButton4;
-    private Button mButton5;
-    private Button mButton6;
-    private Button mButton7;
-    private Button mButton8;
-    private Button mButton9;
-    private Button mButton10;
-    private Button mButton11;
-    private Button mButton12;
-    private Button mButton13;
-    private Button mButton14;
-    private Button mButton15;
+    @Bind(R.id.am_btn_1) Button mButton0;
+    @Bind(R.id.am_btn_2) Button mButton1;
+    @Bind(R.id.am_btn_3) Button mButton2;
+    @Bind(R.id.am_btn_4) Button mButton3;
+    @Bind(R.id.am_btn_5) Button mButton4;
+    @Bind(R.id.am_btn_6) Button mButton5;
+    @Bind(R.id.am_btn_7) Button mButton6;
+    @Bind(R.id.am_btn_8) Button mButton7;
+    @Bind(R.id.am_btn_9) Button mButton8;
+    @Bind(R.id.am_btn_10) Button mButton9;
+    @Bind(R.id.am_btn_11) Button mButton10;
+    @Bind(R.id.am_btn_12) Button mButton11;
+    @Bind(R.id.am_btn_13) Button mButton12;
+    @Bind(R.id.am_btn_14) Button mButton13;
+    @Bind(R.id.am_btn_15) Button mButton14;
+    @Bind(R.id.am_btn_16) Button mButton15;
 
     private EditText mEditText;
 
@@ -35,23 +38,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        mButton0 = (Button) findViewById(R.id.am_btn_1);
-        mButton1 = (Button) findViewById(R.id.am_btn_2);
-        mButton2 = (Button) findViewById(R.id.am_btn_3);
-        mButton3 = (Button) findViewById(R.id.am_btn_4);
-        mButton4 = (Button) findViewById(R.id.am_btn_5);
-        mButton5 = (Button) findViewById(R.id.am_btn_6);
-        mButton6 = (Button) findViewById(R.id.am_btn_7);
-        mButton7 = (Button) findViewById(R.id.am_btn_8);
-        mButton8 = (Button) findViewById(R.id.am_btn_9);
-        mButton9 = (Button) findViewById(R.id.am_btn_10);
-        mButton10 = (Button) findViewById(R.id.am_btn_11);
-        mButton11 = (Button) findViewById(R.id.am_btn_12);
-        mButton12 = (Button) findViewById(R.id.am_btn_13);
-        mButton13 = (Button) findViewById(R.id.am_btn_14);
-        mButton14 = (Button) findViewById(R.id.am_btn_15);
-        mButton15 = (Button) findViewById(R.id.am_btn_16);
+        ButterKnife.bind(this);
 
         mEditText = (EditText) findViewById(R.id.am_edittext_1);
 
