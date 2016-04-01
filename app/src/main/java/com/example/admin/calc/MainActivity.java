@@ -1,10 +1,13 @@
 package com.example.admin.calc;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -24,6 +27,10 @@ public class MainActivity extends AppCompatActivity {
     private Button mButton13;
     private Button mButton14;
     private Button mButton15;
+
+    private EditText mEditText;
+
+    private String previewText = "";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,6 +53,8 @@ public class MainActivity extends AppCompatActivity {
         mButton14 = (Button) findViewById(R.id.am_btn_15);
         mButton15 = (Button) findViewById(R.id.am_btn_16);
 
+        mEditText = (EditText) findViewById(R.id.am_edittext_1);
+
 //        mButton[0].setOnClickListener( Log.d("BTNTAG_", mButton[0].getText()) );
         mButton0.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,86 +71,98 @@ public class MainActivity extends AppCompatActivity {
         mButton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d("BTNTAG_", mButton2.getText().toString());
+                previewAddInput(mButton2.getText().toString());
             }
         });
         mButton3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d("BTNTAG_", mButton3.getText().toString());
+                previewAddInput(mButton3.getText().toString());
             }
         });
         mButton4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d("BTNTAG_", mButton4.getText().toString());
+                previewAddInput(mButton4.getText().toString());
             }
         });
         mButton5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d("BTNTAG_", mButton5.getText().toString());
+                previewAddInput(mButton5.getText().toString());
             }
         });
         mButton6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d("BTNTAG_", mButton6.getText().toString());
+                previewAddInput(mButton6.getText().toString());
             }
         });
         mButton7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d("BTNTAG_", mButton7.getText().toString());
+                previewAddInput(mButton7.getText().toString());
             }
         });
         mButton8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d("BTNTAG_", mButton8.getText().toString());
+                previewAddInput(mButton8.getText().toString());
             }
         });
         mButton9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d("BTNTAG_", mButton9.getText().toString());
+                previewAddInput(mButton9.getText().toString());
             }
         });
         mButton10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d("BTNTAG_", mButton10.getText().toString());
+                previewAddInput(mButton10.getText().toString());
             }
         });
         mButton11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d("BTNTAG_", mButton11.getText().toString());
+                previewAddInput(mButton11.getText().toString());
             }
         });
         mButton12.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d("BTNTAG_", mButton12.getText().toString());
+                previewAddInput(mButton12.getText().toString());
             }
         });
         mButton13.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d("BTNTAG_", mButton13.getText().toString());
+                previewAddInput(mButton13.getText().toString());
             }
         });
         mButton14.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d("BTNTAG_", mButton14.getText().toString());
+                previewAddInput(mButton14.getText().toString());
             }
         });
         mButton15.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d("BTNTAG_", mButton15.getText().toString());
+                previewAddInput(mButton15.getText().toString());
             }
         });
+
+
+    }
+
+    public void startSecondAct(View view){
+        Intent intent = new Intent(this, ListViewActivity.class);
+        startActivityForResult(intent, 1);
+    }
+
+    public void previewAddInput(String newChar){
+        previewText = newChar + previewText;
+        mEditText.setText(previewText);
     }
 }

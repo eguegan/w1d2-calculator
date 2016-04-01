@@ -18,7 +18,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/editText" />
+            android:id="@+id/am_edittext_1" />
 
     </LinearLayout>
 
@@ -145,5 +145,12 @@
             android:layout_height="wrap_content" />
 
     </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/am_btn_more"
+        android:text="More Activities"
+        android:onClick="startSecondAct"/>
 
 </LinearLayout>
